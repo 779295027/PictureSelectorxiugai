@@ -3,4 +3,4 @@
 
 感谢LuckSiege大佬
 
-项目地址 [foryou]:https://github.com/LuckSiege/PictureSelector
+项目地址  [LuckSiege/PictureSelector](https://github.com/LuckSiege/PictureSelector)
