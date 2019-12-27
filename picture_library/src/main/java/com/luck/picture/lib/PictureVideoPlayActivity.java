@@ -174,6 +174,7 @@ public class PictureVideoPlayActivity extends PictureBaseActivity implements
                 mVideoView.setBackgroundColor(Color.TRANSPARENT);
                 return true;
             case MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START:
+                iv_background.setVisibility(View.GONE);
                 iv_loding.setVisibility(View.GONE);
                 return true;
             default:
