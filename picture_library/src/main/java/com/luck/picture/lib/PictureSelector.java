@@ -153,7 +153,7 @@ public final class PictureSelector {
      * @param position
      * @param medias
      */
-    public void externalPicturePreview(int position, List<LocalMedia> medias, int enterAnimation) {
+    public void  externalPicturePreview(int position, List<LocalMedia> medias, int enterAnimation) {
         if (!DoubleUtils.isFastDoubleClick()) {
             Intent intent = new Intent(getActivity(), PictureExternalPreviewActivity.class);
             intent.putExtra(PictureConfig.EXTRA_PREVIEW_SELECT_LIST, (Serializable) medias);

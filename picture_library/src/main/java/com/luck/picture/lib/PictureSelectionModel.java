@@ -14,6 +14,7 @@ import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.config.PictureSelectionConfig;
 import com.luck.picture.lib.engine.ImageEngine;
 import com.luck.picture.lib.entity.LocalMedia;
+import com.luck.picture.lib.photoview.OnImageViewLongClickListener;
 import com.luck.picture.lib.style.PictureWindowAnimationStyle;
 import com.luck.picture.lib.style.PictureCropParameterStyle;
 import com.luck.picture.lib.style.PictureParameterStyle;
@@ -85,6 +86,17 @@ public class PictureSelectionModel {
     public PictureSelectionModel loadImageEngine(ImageEngine engine) {
         if (selectionConfig.imageEngine != engine) {
             selectionConfig.imageEngine = engine;
+        }
+        return this;
+    }
+
+    /**
+     * @param onImageViewLongClickListener Image Long Click Listener
+     * @return
+     */
+    public PictureSelectionModel setOnImageViewLongClickListener(OnImageViewLongClickListener onImageViewLongClickListener) {
+        if (selectionConfig.onImageViewLongClickListener != onImageViewLongClickListener) {
+            selectionConfig.onImageViewLongClickListener = onImageViewLongClickListener;
         }
         return this;
     }

@@ -6,6 +6,7 @@ import android.os.Parcelable;
 
 import androidx.annotation.StyleRes;
 
+import com.luck.picture.lib.photoview.OnImageViewLongClickListener;
 import com.luck.picture.lib.style.PictureWindowAnimationStyle;
 import com.luck.picture.lib.style.PictureCropParameterStyle;
 import com.luck.picture.lib.style.PictureParameterStyle;
@@ -83,6 +84,7 @@ public final class PictureSelectionConfig implements Parcelable {
     public ImageEngine imageEngine;
     public List<LocalMedia> selectionMedias;
     public String cameraFileName;
+    public OnImageViewLongClickListener onImageViewLongClickListener;
     public boolean isCheckOriginalImage;
     @Deprecated
     public int overrideWidth;
@@ -180,6 +182,7 @@ public final class PictureSelectionConfig implements Parcelable {
         renameCropFileName = "";
         selectionMedias = new ArrayList<>();
         imageEngine = null;
+        onImageViewLongClickListener=null;
         style = null;
         cropStyle = null;
         windowAnimationStyle = null;
@@ -208,6 +211,7 @@ public final class PictureSelectionConfig implements Parcelable {
         selectionSpec.reset();
         return selectionSpec;
     }
+
 
     private static final class InstanceHolder {
         private static final PictureSelectionConfig INSTANCE = new PictureSelectionConfig();

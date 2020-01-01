@@ -220,7 +220,7 @@ public class PictureExternalPreviewActivity extends PictureBaseActivity implemen
             // 长图控件
             final SubsamplingScaleImageView longImg = contentView.findViewById(R.id.longImg);
 
-            LocalMedia media = images.get(position);
+           final LocalMedia media = images.get(position);
             if (media != null) {
                 mimeType = media.getMimeType();
                 final String path;
@@ -271,6 +271,8 @@ public class PictureExternalPreviewActivity extends PictureBaseActivity implemen
                             PermissionChecker.requestPermissions(PictureExternalPreviewActivity.this,
                                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
                         }
+                    }else if(config.onImageViewLongClickListener!=null){
+                        config.onImageViewLongClickListener.onLongClick(media);
                     }
                     return true;
                 });
