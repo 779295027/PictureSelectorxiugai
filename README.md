@@ -3,7 +3,7 @@
 
 感谢LuckSiege大佬
 
-项目地址  [LuckSiege/PictureSelector](https://github.com/LuckSiege/PictureSelector)
+项目地址  [LuckSiege/PictureSelector](https://github.com/LuckSiege/PictureSelector) 版本v2.4.0
 
 因项目需求，取消了不能同时选择视频和图片的限制
 
