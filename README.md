@@ -1,3 +1,4 @@
+
 # PictureSelectorxiugai
 为了项目需求，在PictureSelector的基础上做了一些小修改
 
@@ -23,3 +24,10 @@
  ```
  
  第一个参数没变，还是视频地址，第二个参数是缩略图地址，也就是视频其中一帧的图片
+ 
+ 添加了预览图片的长按回调
+ ```java 
+PictureSelector.create(activity).themeStyle(R.style.picture_default_style)
+               .setOnImageViewLongClickListener{ activity , it -> ... }
+ 
+ ```
