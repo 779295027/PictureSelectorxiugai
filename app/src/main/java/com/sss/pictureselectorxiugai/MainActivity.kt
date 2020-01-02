@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity() {
 
             PictureSelector.create(this).themeStyle(R.style.picture_default_style)
                 .loadImageEngine(PictureSelectorGlideEngine.createGlideEngine())
-                .setOnImageViewLongClickListener {
+                .setOnImageViewLongClickListener { activity, it ->
                     Log.e("------------------", "----${it.path}----")
-                    Toast.makeText(this, "长按", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, "长按", Toast.LENGTH_SHORT).show()
                 }
                 .openExternalPreview(0, arrayListOf(bean))
         }
